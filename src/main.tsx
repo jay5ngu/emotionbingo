@@ -8,7 +8,7 @@ Devvit.configure({
 
 // Add a menu item to the subreddit menu for instantiating the new experience post
 Devvit.addMenuItem({
-  label: 'Add to my post',
+  label: 'Add to my hackathon post',
   location: 'subreddit',
   forUserType: 'moderator',
   onPress: async (_event, context) => {
@@ -17,7 +17,7 @@ Devvit.addMenuItem({
 
     const subreddit = await reddit.getCurrentSubreddit();
     const post = await reddit.submitPost({
-      title: 'My devvit post',
+      title: 'My Reddit Hackathon post',
       subredditName: subreddit.name,
       // The preview appears while the post loads
       preview: (
@@ -47,7 +47,7 @@ Devvit.addCustomPostType({
           height="48px"
           width="48px"
         />
-        <text size="large">{`Click counter: ${counter}`}</text>
+        <text size="large">{`Click this counter: ${counter}`}</text>
         <button appearance="primary" onPress={() => setCounter((counter) => counter + 1)}>
           Click me!
         </button>
