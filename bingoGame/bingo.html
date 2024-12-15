@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <title>Brav Matching</title>
+    <link href="bingo.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload="createBoard()">
+    <audio id="wrong">
+        <source src="sound/wrong.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="correct">
+        <source src="sound/correct.wav" type="audio/wav">
+    </audio>
+
+    <p>
+        <h1 id="headerAtTop">Gain a sense of what your emotions are really telling you. Match the definition to the
+            emotion it connects to.</h1>
+    </p>
+    <br>
+    <p>
+        <h2 id="matcher"></h2>
+    </p>
+    <br>
+    <p>
+        <h3 id="bingo"></h3>
+    </p>
+    <table id="bingoBoard" hidden value="createBoard()">
+        <tbody>
+            <tr>
+                <td onClick="markOff(0)">
+                    <div id="0" class="tile" type=""></div>
+                </td>
+
+                <td onClick="markOff(1)">
+                    <div id="1" class="tile" type=""></div>
+                </td>
+
+                <td onClick="markOff(2)">
+                    <div id="2" class="tile" type=""></div>
+                </td>
+
+                <td onClick="markOff(3)">
+                    <div id="3" class="tile" type=""></div>
+                </td>
+
+                <td onClick="markOff(4)">
+                    <div id="4" class="tile" type=""></div>
+                </td>
+            </tr>
+            <tr>
+                <td onClick="markOff(5)">
+                    <div id="5" class="tile" type=""></div>
+                </td>
+
+                <td onClick="markOff(6)">
+                    <div id="6" class="tile" type=""></div>
+                </td>
+                <td onClick="markOff(7)">
+                    <div id="7" class="tile" type=""></div>
+                </td>
+                <td onClick="markOff(8)">
+                    <div id="8" class="tile" type=""></div>
+                </td>
+                <td onClick="markOff(9)">
+                    <div id="9" class="tile" type=""></div>
+                </td>
+            </tr>
+            <tr>
+                <td onClick="markOff(10)">
+                    <div id="10" class="tile" type=""></div>
+                </td>
+                <td onClick="markOff(11)">
+                    <div id="11" class="tile" type=""></div>
+                </td>
+                <td onClick="markOff(12)">
+                    <div id="12" class="tile" type=""></div>
+                </td>
+                <td onClick="markOff(13)">
+                    <div id="13" class="tile" type=""></div>
+                </td>
+                <td onClick="markOff(14)">
+                    <div id="14" class="tile" type=""></div>
+                </td>
+            </tr>
+            <tr>
+                <td onClick="markOff(15)">
+                    <div id="15" class="tile" type=""></div>
+                </td>
+                <td onClick="markOff(16)">
+                    <div id="16" class="tile" type=""></div>
+                </td>
+                <td onClick="markOff(17)">
+                    <div id="17" class="tile" type=""></div>
+                </td>
+                <td onClick="markOff(18)">
+                    <div id="18" class="tile" type=""></div>
+                </td>
+                <td onClick="markOff(19)">
+                    <div id="19" class="tile" type=""></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td onClick="markOff(20)">
+                    <div id="20" class="tile" type=""></div>
+                </td>
+                <td onClick="markOff(21)">
+                    <div id="21" class="tile" type=""></div>
+                </td>
+                <td onClick="markOff(22)">
+                    <div id="22" class="tile" type=""></div>
+                </td>
+                <td onClick="markOff(23)">
+                    <div id="23" class="tile" type=""></div>
+                </td>
+                <td onClick="markOff(24)">
+                    <div id="24" class="tile" type=""></div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="bingo.js"></script>
+    <div id="test"></div>
+
+    </div>
+    </div>
+
+
+</body>
+
+</html>
