@@ -1,5 +1,6 @@
 // Learn more at developers.reddit.com/docs
 import { Devvit, useState } from '@devvit/public-api';
+// import BingoGame from '../bingoGame/bingo.js';
 
 Devvit.configure({
   redditAPI: true,
@@ -30,11 +31,7 @@ Devvit.addMenuItem({
   },
 });
 
-// Add a post type definition
-Devvit.addCustomPostType({
-  name: 'Experience Post',
-  height: 'regular',
-  render: (_context) => {
+const CounterGame = () => {
     const [counter, setCounter] = useState(0);
 
     return (
@@ -47,12 +44,20 @@ Devvit.addCustomPostType({
           height="48px"
           width="48px"
         />
-        <text size="large">{`Click this counter: ${counter}`}</text>
+        <text size="large">{`Click counter: ${counter}`}</text>
         <button appearance="primary" onPress={() => setCounter((counter) => counter + 1)}>
           Click me!
         </button>
       </vstack>
     );
+};
+
+// Add a post type definition
+Devvit.addCustomPostType({
+  name: 'Experience Post',
+  height: 'regular',
+  render: (_context) => {
+    return <CounterGame />
   },
 });
 
